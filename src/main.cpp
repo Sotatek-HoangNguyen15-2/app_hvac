@@ -27,6 +27,7 @@ static gboolean quit_cb(gpointer user_data)
 int main(int argc, char** argv)
 {
 	GMainLoop *loop = NULL;
+	std::cout << "Hello you are in APP HVAC" << std::endl;
 
 	loop = g_main_loop_new(NULL, FALSE);
 	if (!loop) {

@@ -188,6 +188,7 @@ void HvacService::Resubscribe(const SubscribeRequest *request)
 
 void HvacService::set_left_temperature(uint8_t temp)
 {
+	std::cout << "set_left_temperature" << temp << std::endl;
 	m_can_helper.set_left_temperature(temp);
 	m_led_helper.set_left_temperature(temp);
 
@@ -201,6 +202,7 @@ void HvacService::set_left_temperature(uint8_t temp)
 
 void HvacService::set_right_temperature(uint8_t temp)
 {
+	std::cout << "set_right_temperature" << temp << std::endl;
 	m_can_helper.set_right_temperature(temp);
 	m_led_helper.set_right_temperature(temp);
 
@@ -214,6 +216,7 @@ void HvacService::set_right_temperature(uint8_t temp)
 
 void HvacService::set_left_fan_speed(uint8_t speed)
 {
+	std::cout << "set_left_fan_speed" << speed << std::endl;
 	set_fan_speed(speed);
 
 	// Push out new value
@@ -226,6 +229,7 @@ void HvacService::set_left_fan_speed(uint8_t speed)
 
 void HvacService::set_right_fan_speed(uint8_t speed)
 {
+	std::cout << "set_right_fan_speed" << speed << std::endl;
 	set_fan_speed(speed);
 
 	// Push out new value
